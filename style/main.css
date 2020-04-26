@@ -316,4 +316,111 @@ main .container .main-img img {
     width: 100%;
   }
 }
+
+section.about {
+  background: #DF2770;
+}
+
+section.about .container {
+  max-width: 1100px;
+  padding: 80px 0;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+  -ms-grid-columns: 100%;
+      grid-template: 1fr 1fr/100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.about .container .about-img img, section.about .container .about-content .content-wrapper {
+  border-radius: 5px;
+}
+
+section.about .container .about-img {
+  margin-bottom: 30px;
+}
+
+section.about .container .about-img img {
+  display: block;
+  min-width: 400px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+section.about .container .about-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+section.about .container .about-content .content-wrapper {
+  background: #fff;
+  -webkit-box-shadow: 4px 10px 10px 2px rgba(44, 44, 44, 0.267);
+          box-shadow: 4px 10px 10px 2px rgba(44, 44, 44, 0.267);
+  margin: 0 auto;
+  padding: 40px 30px;
+  width: 90%;
+}
+
+section.about .container .about-content .content-wrapper * {
+  font-family: "Rubik", cursive;
+  text-align: left;
+  margin: 0 auto;
+}
+
+section.about .container .about-content .content-wrapper h3 {
+  font-size: 32px;
+}
+
+section.about .container .about-content .content-wrapper p {
+  margin-top: 20px;
+  line-height: 25px;
+  color: #797979;
+}
+
+@media screen and (min-width: 720px) {
+  section.about .container {
+    -ms-grid-rows: 100%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template: 100%/1fr 1fr;
+    overflow: hidden;
+    padding: 100px 0 130px;
+  }
+  section.about .container .about-img, section.about .container .about-img {
+    padding: 0 10px;
+  }
+  section.about .container .about-content .content-wrapper {
+    padding: 60px 50px;
+    width: 130%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateX(-40%) translateY(100px);
+            transform: translateX(-40%) translateY(100px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section.about .container .about-content .content-wrapper h3 {
+    margin: 0;
+  }
+}
 /*# sourceMappingURL=main.css.map */
