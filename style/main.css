@@ -40,6 +40,10 @@ nav .container a {
   font-family: "Sniglet", cursive;
 }
 
+nav .container a:hover {
+  color: #ff512f;
+}
+
 nav .container .brand {
   font-size: 28px;
 }
@@ -124,11 +128,29 @@ nav .container .navs ul li {
   text-align: center;
 }
 
+nav .container .navs ul li.dropdown .dropdown-items {
+  background: #31313177;
+  margin: 10px 0;
+  padding: 10px 0;
+  display: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .container .navs ul li.dropdown a:focus + .dropdown-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 nav .container .navs.toggle {
   right: 0;
 }
 
 @media screen and (min-width: 720px) {
+  nav .container a:hover {
+    color: #000;
+  }
   nav .container .menu-btn {
     display: none;
   }
@@ -149,6 +171,38 @@ nav .container .navs.toggle {
   nav .container .navs ul li {
     margin: 0;
     margin-left: 40px;
+  }
+  nav .container .navs ul li a {
+    display: inline-block;
+    padding: 10px 0;
+  }
+  nav .container .navs ul li.dropdown:hover .dropdown-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .container .navs ul li.dropdown:hover .dropdown-items a:hover {
+    background: rgba(230, 222, 222, 0.685);
+  }
+  nav .container .navs ul li.dropdown .dropdown-items {
+    -webkit-box-shadow: 6px 8px 15px 5px rgba(0, 0, 0, 0.267);
+            box-shadow: 6px 8px 15px 5px rgba(0, 0, 0, 0.267);
+    position: absolute;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  nav .container .navs ul li.dropdown .dropdown-items a {
+    width: 200px;
+    text-align: left;
+    display: inline-block;
+    padding: 15px 20px;
+    color: #000000;
   }
 }
 

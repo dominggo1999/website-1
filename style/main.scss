@@ -46,6 +46,10 @@ nav{
         a{
             color: #fff;
             font-family: $sniglet-font;
+
+            &:hover{
+                color: #ff512f;
+            }
         }
     
         .brand{
@@ -110,6 +114,18 @@ nav{
                     margin: 30px 0;
                     text-align: center;
                 }
+
+                li.dropdown .dropdown-items{
+                    background: #31313177;
+                    margin: 10px 0;
+                    padding: 10px 0;
+                    display: none;
+                    justify-content: space-around;
+                }
+
+                li.dropdown a:focus + .dropdown-items{
+                    display: flex;
+                }
             }
         }
 
@@ -122,6 +138,12 @@ nav{
 @media screen and (min-width:$medium){
     nav{
         .container{
+            a{
+                &:hover{
+                    color: #000;
+                }
+            }
+            
             .menu-btn{
                 display: none;
             }
@@ -132,17 +154,44 @@ nav{
                 left: 0;
                 width: auto;
                 ul{
-                    padding: 0;
+                    padding:0;
                     flex-direction: row;
                     background: none;
                     li{
                         margin:0;
                         margin-left: 40px;
+                        a{
+                            display: inline-block;
+                            padding: 10px 0;
+                        }
+                    }
+
+                    li.dropdown:hover .dropdown-items{
+                        display: flex;
+                        a:hover{
+                            background: rgba(230, 222, 222, 0.685);
+                        }
+                    }
+
+                    li.dropdown .dropdown-items{
+                        box-shadow: 6px 8px 15px 5px rgba(0, 0, 0, 0.267);
+                        position: absolute;
+                        display: none;
+                        flex-direction: column;
+                        background: #ffffff;
+                        margin: 0;
+                        padding: 0;
+                        a{
+                            width: 200px;
+                            text-align:left;
+                            display: inline-block;
+                            padding: 15px 20px;
+                            color: #000000;
+                        }
                     }
                 }
             }
         }
-
     }
 }
 
