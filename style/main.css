@@ -137,7 +137,7 @@ nav .container .navs ul li.dropdown .dropdown-items {
       justify-content: space-around;
 }
 
-nav .container .navs ul li.dropdown a:focus + .dropdown-items {
+nav .container .navs ul li.dropdown:hover .dropdown-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,7 +220,7 @@ main .container {
   -ms-grid-rows: 50% 50%;
   -ms-grid-columns: 100%;
       grid-template: 50% 50% / 100%;
-  padding: 100px 0 180px;
+  padding: 100px 0 120px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
