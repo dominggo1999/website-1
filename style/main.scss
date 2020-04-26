@@ -197,18 +197,103 @@ nav{
 
 
 main{
-    width: 100%;
     background:$redgradient;
     .container{
-        max-width: 1100px;
+        font-family: $rubik;
         margin: 0 auto;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
+        overflow: hidden;
+        display: grid;
+        grid-template: 50% 50% / 100%;
+        padding: 100px 0 180px;
         align-items: center;
+        min-height: 100vh;
+        max-width: 1100px;
 
-        img{
-            display: none;
+        .main-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .author,h2,.dummy-text{
+                color: #fff;
+                text-align: center;
+            }
+
+            .author{
+                text-transform: uppercase;
+                font-size: 16px;
+                letter-spacing: 4px;
+            }
+            h2{
+                margin-top: 0px;
+                font-size: 45px;
+                padding: 20px;
+            }
+            .dummy-text{
+                margin-top: 0;
+                font-size: 16px;
+                width: 80%;
+                line-height: 25px;
+            }
+
+            button{
+                cursor: pointer;
+                margin-top: 20px;
+                background: #fff;
+                color: #000000;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 15px 48px;
+                border-radius: 50px;
+                border: none;
+
+                &:focus{
+                    outline: none;
+                    border: none;
+                }
+
+                &:hover{
+                    outline: none;
+                    color: #fff;
+                    background:#1f1218;
+                }
+            }
+        }
+
+        .main-img{
+            img{
+                display: block;
+                width: 80%;
+                margin:0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:$medium) {
+    main{
+        .container{
+            grid-template: 100% / 60% 40%;
+            padding: 0;
+
+            .main-content{
+                h2{
+                    margin-top: 20px;
+                    padding: 0;
+                    font-size: 57px;
+                }
+
+                .dummy-text{
+                    margin-top: 20px;
+                }
+            }
+
+            .main-img{
+                img{
+                    width: 100%;
+                }
+            }
         }
     }
 }

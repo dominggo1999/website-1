@@ -207,18 +207,35 @@ nav .container .navs.toggle {
 }
 
 main {
-  width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#dd2476), to(#ff512f));
   background: linear-gradient(to bottom, #dd2476, #ff512f);
 }
 
 main .container {
-  max-width: 1100px;
+  font-family: "Rubik", cursive;
   margin: 0 auto;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+  -ms-grid-columns: 100%;
+      grid-template: 50% 50% / 100%;
+  padding: 100px 0 180px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
+  max-width: 1100px;
+}
+
+main .container .main-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -227,7 +244,76 @@ main .container {
           align-items: center;
 }
 
-main .container img {
-  display: none;
+main .container .main-content .author, main .container .main-content h2, main .container .main-content .dummy-text {
+  color: #fff;
+  text-align: center;
+}
+
+main .container .main-content .author {
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+main .container .main-content h2 {
+  margin-top: 0px;
+  font-size: 45px;
+  padding: 20px;
+}
+
+main .container .main-content .dummy-text {
+  margin-top: 0;
+  font-size: 16px;
+  width: 80%;
+  line-height: 25px;
+}
+
+main .container .main-content button {
+  cursor: pointer;
+  margin-top: 20px;
+  background: #fff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 48px;
+  border-radius: 50px;
+  border: none;
+}
+
+main .container .main-content button:focus {
+  outline: none;
+  border: none;
+}
+
+main .container .main-content button:hover {
+  outline: none;
+  color: #fff;
+  background: #1f1218;
+}
+
+main .container .main-img img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 720px) {
+  main .container {
+    -ms-grid-rows: 100%;
+    -ms-grid-columns: 60% 40%;
+        grid-template: 100% / 60% 40%;
+    padding: 0;
+  }
+  main .container .main-content h2 {
+    margin-top: 20px;
+    padding: 0;
+    font-size: 57px;
+  }
+  main .container .main-content .dummy-text {
+    margin-top: 20px;
+  }
+  main .container .main-img img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
