@@ -23,6 +23,43 @@ const reset = () =>{
         }
     })
 }
-
-
 reset();
+
+
+// Animasi counter
+const counter = document.querySelectorAll(".counter .counter-item h2");
+const observer = document.querySelector(".counter .observer");
+const speed = 320;
+
+
+const animateCounter = (countElement, speed) =>{
+    counter.forEach(el => {
+        let target = +el.getAttribute("data-target");
+        let increment = target/speed;
+        let value = +el.textContent;
+        
+        setInterval(() => {
+            if(value < target){
+                value+=increment;
+                el.textContent = Math.ceil(value);    
+            }else{
+                el.textContent = target;
+            }
+        }, 10);
+    });
+}
+
+const startCount = (obs) =>{
+    let height = window.innerHeight;
+    let topPosition = obs.getBoundingClientRect().top;
+
+    if(topPosition > 0 && height-topPosition > 50){
+        animateCounter(counter,speed);
+    }
+}
+
+startCount(observer);
+
+window.addEventListener("scroll",()=>{
+    startCount(observer);
+})

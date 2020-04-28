@@ -425,4 +425,90 @@ section.about .container .about-content p {
     padding: 0 40px;
   }
 }
+
+section.counter {
+  width: 100%;
+  background: #4C4C4C;
+}
+
+section.counter .container {
+  margin: 0 auto;
+  padding: 150px 20px;
+  max-width: 1100px;
+  text-align: center;
+}
+
+section.counter .container .text-content {
+  margin-bottom: 50px;
+}
+
+section.counter .container .text-content h3, section.counter .container .text-content p {
+  color: #fff;
+  font-weight: 200;
+}
+
+section.counter .container .text-content h3 {
+  font-family: "Patua One", cursive;
+  font-size: 32px;
+}
+
+section.counter .container .text-content p {
+  font-family: "Rubik", cursive;
+  font-size: 14px;
+}
+
+section.counter .container .counter-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+}
+
+section.counter .container .counter-wrapper .counter-item {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px 10px;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-box-shadow: 1px 2px 25px 0 rgba(255, 0, 0, 0.308);
+          box-shadow: 1px 2px 25px 0 rgba(255, 0, 0, 0.308);
+}
+
+section.counter .container .counter-wrapper .counter-item h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  padding-bottom: 5px;
+  line-height: 65px;
+  color: #FF6347;
+}
+
+section.counter .container .counter-wrapper .counter-item p {
+  padding-bottom: 10px;
+  font-family: "Patua One", cursive;
+}
+
+@media screen and (min-width: 540px) {
+  section.counter .container .counter-wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  section.counter .container .counter-wrapper .counter-item {
+    width: 100%;
+  }
+  section.counter .container .counter-wrapper .counter-item h2 {
+    font-size: 65px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  section.counter .container .counter-wrapper {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  section.counter .container .counter-wrapper .counter-item h2 {
+    font-size: 65px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
