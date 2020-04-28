@@ -519,6 +519,7 @@ section.products{
                 }
 
                 button{
+                    outline: none;
                     color: #fff;
                     background: #343A40;
                     border: none;
@@ -539,6 +540,13 @@ section.products{
             .cards-wrapper{
                 grid-template-columns: repeat(2,1fr);
                 grid-gap: 20px;
+                .card{
+                    padding: 20px;
+                }
+                .card .description{
+                    padding:40px;
+                }
+
                 .card:nth-last-of-type(1){
                     grid-column: 1/span 2;
                     width: 50%;
@@ -656,7 +664,8 @@ section.download{
                 padding: 35px 35px;
                 box-shadow: 1px 1px 15px 0px rgba(49, 49, 49, 0.26);
                 margin-bottom: 40px;
-                transition: all ease-in-out 400ms;
+                transition: background-color ease-in-out 350ms;
+
                 .card-img{
                     width: 150px;
                     height: 150px;
@@ -680,16 +689,17 @@ section.download{
                 }
                 h4 + p, .position, .contact{
                     color: #828080;
+                    transition: color ease-in-out 200ms;
                 }
 
                 .contact{
                     font-size: 25px;
                 }
+
             }
 
             .card:hover{
-                background: $redgradient;
-                transform: translateY(-4px);
+                background: #ff512f;
                 h4 + p, .position, .contact{
                     color: #fff;
                 }
@@ -726,3 +736,81 @@ section.download{
     }
 }
 
+
+footer{
+    background: #2F2F2F;
+    padding: 90px 100px;
+    .container{
+        max-width: 1100px;
+        margin: 0 auto;
+        div{
+            font-family:$apple;
+            margin-bottom: 30px;
+            h3{
+                color:#fff;
+                margin-bottom: 10px;
+                font-size: 28px;
+            }
+            p{
+                color:rgb(145, 145, 145);
+                line-height: 25px;
+            }
+        }
+
+        .about-us   {
+            p:nth-of-type(1){
+                margin-bottom: 40px;
+            }
+
+            .orange{
+                color:#E74C2E;
+            }
+        }
+
+        .news-letter{
+            p{
+                margin-bottom: 5px;
+            }
+            form{
+                display: flex;
+                align-items:center;
+            }
+            input{
+                height: 40px;
+                width: 80%;
+                font-size: 17px;
+                padding: 0 10px;
+                background: #343A40;
+                color: #fff;
+                border:none;
+            }
+            button{
+                background: $redgradient;
+                padding: 8px;
+                color: #2F2F2F;
+                font-size:20px;
+                border: none;
+            }
+        }
+
+        .follow-us p {
+            margin-bottom: 15px;
+        }
+
+        .follow-us .social-media{
+            color:#DD2476;
+            font-size: 20px;
+            i{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and(min-width:$large){
+    footer .container {
+        display: grid;
+        grid-template-columns:4fr 5fr 2fr;
+        grid-gap: 20px;
+    }
+}

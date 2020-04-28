@@ -569,6 +569,7 @@ section.products .container .cards-wrapper .card .price {
 }
 
 section.products .container .cards-wrapper .card button {
+  outline: none;
   color: #fff;
   background: #343A40;
   border: none;
@@ -584,6 +585,12 @@ section.products .container .cards-wrapper .card button {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+  }
+  section.products .container .cards-wrapper .card {
+    padding: 20px;
+  }
+  section.products .container .cards-wrapper .card .description {
+    padding: 40px;
   }
   section.products .container .cards-wrapper .card:nth-last-of-type(1) {
     -ms-grid-column: 1;
@@ -721,8 +728,8 @@ section.download .container .buttons button .text p:nth-of-type(1) {
   -webkit-box-shadow: 1px 1px 15px 0px rgba(49, 49, 49, 0.26);
           box-shadow: 1px 1px 15px 0px rgba(49, 49, 49, 0.26);
   margin-bottom: 40px;
-  -webkit-transition: all ease-in-out 400ms;
-  transition: all ease-in-out 400ms;
+  -webkit-transition: background-color ease-in-out 350ms;
+  transition: background-color ease-in-out 350ms;
 }
 
 .user-say .container .cards-wrapper .card .card-img {
@@ -753,6 +760,8 @@ section.download .container .buttons button .text p:nth-of-type(1) {
 
 .user-say .container .cards-wrapper .card h4 + p, .user-say .container .cards-wrapper .card .position, .user-say .container .cards-wrapper .card .contact {
   color: #828080;
+  -webkit-transition: color ease-in-out 200ms;
+  transition: color ease-in-out 200ms;
 }
 
 .user-say .container .cards-wrapper .card .contact {
@@ -760,10 +769,7 @@ section.download .container .buttons button .text p:nth-of-type(1) {
 }
 
 .user-say .container .cards-wrapper .card:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#dd2476), to(#ff512f));
-  background: linear-gradient(to bottom, #dd2476, #ff512f);
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+  background: #ff512f;
 }
 
 .user-say .container .cards-wrapper .card:hover h4 + p, .user-say .container .cards-wrapper .card:hover .position, .user-say .container .cards-wrapper .card:hover .contact {
@@ -795,6 +801,95 @@ section.download .container .buttons button .text p:nth-of-type(1) {
     -ms-grid-column-span: 1;
     grid-column: 3/4;
     width: 100%;
+  }
+}
+
+footer {
+  background: #2F2F2F;
+  padding: 90px 100px;
+}
+
+footer .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+footer .container div {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 30px;
+}
+
+footer .container div h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+footer .container div p {
+  color: #919191;
+  line-height: 25px;
+}
+
+footer .container .about-us p:nth-of-type(1) {
+  margin-bottom: 40px;
+}
+
+footer .container .about-us .orange {
+  color: #E74C2E;
+}
+
+footer .container .news-letter p {
+  margin-bottom: 5px;
+}
+
+footer .container .news-letter form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container .news-letter input {
+  height: 40px;
+  width: 80%;
+  font-size: 17px;
+  padding: 0 10px;
+  background: #343A40;
+  color: #fff;
+  border: none;
+}
+
+footer .container .news-letter button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dd2476), to(#ff512f));
+  background: linear-gradient(to bottom, #dd2476, #ff512f);
+  padding: 8px;
+  color: #2F2F2F;
+  font-size: 20px;
+  border: none;
+}
+
+footer .container .follow-us p {
+  margin-bottom: 15px;
+}
+
+footer .container .follow-us .social-media {
+  color: #DD2476;
+  font-size: 20px;
+}
+
+footer .container .follow-us .social-media i {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 960px) {
+  footer .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 4fr 5fr 2fr;
+        grid-template-columns: 4fr 5fr 2fr;
+    grid-gap: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
