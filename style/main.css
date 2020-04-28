@@ -547,7 +547,7 @@ section.products .container .cards-wrapper {
 section.products .container .cards-wrapper .card {
   text-align: center;
   background: #F6FCFC;
-  border: 1px solid #DFDFDF;
+  border: 1px solid #cacaca;
   padding: 20px 70px;
   margin: 0 auto 50px;
 }
@@ -603,6 +603,83 @@ section.products .container .cards-wrapper .card button {
     -ms-grid-column-span: 1;
     grid-column: 3/4;
     width: 100%;
+  }
+}
+
+section.download {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dd2476), to(#ff512f));
+  background: linear-gradient(to bottom, #dd2476, #ff512f);
+  padding: 70px 20px;
+}
+
+section.download .container {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+section.download .container h3, section.download .container .description {
+  color: #fff;
+}
+
+section.download .container h3 {
+  font-size: 40px;
+}
+
+section.download .container .description {
+  font-size: 20px;
+  padding: 40px 30px;
+}
+
+section.download .container .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.download .container .buttons button {
+  cursor: pointer;
+  margin: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  padding: 20px 25px;
+  border-radius: 40px;
+  outline: none;
+  border: none;
+}
+
+section.download .container .buttons button .text {
+  margin-left: 20px;
+}
+
+section.download .container .buttons button .text p:nth-of-type(1) {
+  font-weight: 500;
+  font-size: 27px;
+}
+
+@media screen and (max-width: 720px) {
+  section.download .container .description {
+    font-size: 1.2em;
+  }
+  section.download .container .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.download .container .buttons button {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=main.css.map */
