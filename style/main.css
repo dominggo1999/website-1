@@ -548,7 +548,6 @@ section.products .container .cards-wrapper .card {
   text-align: center;
   background: #F6FCFC;
   border: 1px solid #cacaca;
-  padding: 20px 70px;
   margin: 0 auto 50px;
 }
 
@@ -559,7 +558,7 @@ section.products .container .cards-wrapper .card .card-title {
 }
 
 section.products .container .cards-wrapper .card .description {
-  padding: 40px 0;
+  padding: 40px;
 }
 
 section.products .container .cards-wrapper .card .price {
@@ -577,7 +576,7 @@ section.products .container .cards-wrapper .card button {
   border-radius: 30px;
   margin-bottom: 50px;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 720px) {
@@ -635,8 +634,8 @@ section.download .container h3 {
 }
 
 section.download .container .description {
-  font-size: 20px;
   padding: 40px 30px;
+  font-size: 1.1em;
 }
 
 section.download .container .buttons {
@@ -658,10 +657,10 @@ section.download .container .buttons button {
       -ms-flex-align: center;
           align-items: center;
   text-align: left;
-  padding: 20px 25px;
   border-radius: 40px;
   outline: none;
   border: none;
+  padding: 20px 40px;
 }
 
 section.download .container .buttons button .text {
@@ -675,7 +674,7 @@ section.download .container .buttons button .text p:nth-of-type(1) {
 
 @media screen and (max-width: 720px) {
   section.download .container .description {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   section.download .container .buttons {
     -webkit-box-orient: vertical;
@@ -684,9 +683,8 @@ section.download .container .buttons button .text p:nth-of-type(1) {
             flex-direction: column;
   }
   section.download .container .buttons button {
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    width: 80%;
+    margin: 0 auto 30px;
   }
 }
 
@@ -756,6 +754,7 @@ section.download .container .buttons button .text p:nth-of-type(1) {
 
 .user-say .container .cards-wrapper .card h4 + p {
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .user-say .container .cards-wrapper .card h4 + p, .user-say .container .cards-wrapper .card .position, .user-say .container .cards-wrapper .card .contact {
